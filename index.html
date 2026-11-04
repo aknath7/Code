@@ -54,6 +54,10 @@
     .rule { width: 42px; height: 1px; margin: 2rem auto; background: linear-gradient(90deg, transparent, rgba(183,160,255,.8), transparent); }
     .note { color: #85869d; font-size: .78rem; letter-spacing: .04em; }
     .note b { color: #d9d1ff; font-weight: 500; }
+        .site-nav { position: fixed; z-index: 2; top: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: .35rem; padding: .35rem; border: 1px solid rgba(203,197,255,.14); border-radius: 999px; background: rgba(18,20,34,.72); backdrop-filter: blur(14px); }
+    .site-nav a { padding: .65rem 1rem; border-radius: 999px; color: #b9b9ce; text-decoration: none; font-size: .82rem; transition: color .2s, background .2s; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: #fff; background: rgba(183,160,255,.16); }
+    @media (max-width: 520px) { .site-nav { top: 1rem; } }
     @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes turn { to { transform: rotate(360deg); } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
@@ -62,12 +66,18 @@
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="orbit" aria-hidden="true"><span class="spark"></span></div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+  </nav>
   <main>
     <div class="eyebrow">A fresh beginning</div>
     <h1><span>Hello, world! My Name is Anjan Nath!!</span></h1>
     <p class="subtitle">A small page, a whole universe of possibility.<br>Glad you’re here.</p>
     <div class="rule" aria-hidden="true"></div>
-    <p class="note">Made with <b>curiosity</b> &amp; a little bit of CSS</p>
+    <p class="note">Made with <b>curiosity</b> &amp; a little bit of CSS and HTML</p>
   </main>
 </body>
 </html>
+
+
